@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS+ Company Manual - Premium Edition</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Premium Aero Theme CSS -->
+  <link rel="stylesheet" href="company-manual-premium.css">
+  
+  <!-- Optional: Add Tailwind for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#ffffff',
+        primaryTextColor: '#1f2937',
+        primaryBorderColor: '#e5e7eb',
+        lineColor: '#ef4444',
+        secondaryColor: '#fef2f2',
+        tertiaryColor: '#ffffff'
+      }
+    });
+  </script>
+  
+  <style>
+    /* Additional custom styles for your specific needs */
+    body {
+      background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+      min-height: 100vh;
+    }
+    
+    .dark body {
+      background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--ss-primary);
+      border-radius: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--ss-primary-dark);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Main Container -->
+<div class="iso-section">
+
+  <!-- Premium Header Card -->
+  <div class="markdown-card-premium !mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+      <div>
+        <p class="text-red-500 font-extrabold uppercase tracking-[0.3em] text-[10px] mb-3 opacity-90">
+          Official Corporate Documentation
+        </p>
+        <h1 class="text-4xl md:text-5xl font-black mb-2 tracking-tighter leading-none">
+          COMPANY MANUAL
+        </h1>
+        <p class="text-red-500/80 text-sm font-medium tracking-wide">
+          Sécurité Services Plus (SS+)
+        </p>
+      </div>
+      <div class="flex flex-col justify-end md:items-end">
+        <div class="grid grid-cols-2 gap-8 text-[10px] uppercase tracking-widest font-bold opacity-70">
+          <div class="text-center md:text-right">
+            <p class="mb-1 text-red-500">Version</p>
+            <p class="text-xl font-black text-white">0.5.0</p>
+          </div>
+          <div class="text-center md:text-right border-l border-white/10 pl-8">
+            <p class="mb-1 text-red-500">Last Updated</p>
+            <p class="text-xl font-black text-white">JAN 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 pt-8 border-t border-white/10 flex flex-wrap gap-x-12 gap-y-4 text-[11px] font-bold uppercase tracking-widest opacity-80">
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span> 
+        OWNER: Karim BEN SALEM
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 bg-slate-500 rounded-full"></span> 
+        DEV: WAVE IO
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 bg-green-500 rounded-full"></span> 
+        REVIEW: ISO-9001 COMPLIANT
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Reference Section -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-black mb-6">🎯 QUICK REFERENCE</h2>
+    
+    <div class="modern-table-container">
+      <table class="modern-table">
+        <thead>
+          <tr>
+            <th class="w-1/3">Contact Type</th>
+            <th>Corporate Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-bold">📧 General Email</td>
+            <td class="text-red-600 dark:text-red-400 font-medium">contact@ssplus.tn</td>
+          </tr>
+          <tr>
+            <td class="font-bold">☎️ Main Phone</td>
+            <td>+216 74 45 30 27</td>
+          </tr>
+          <tr>
+            <td class="font-bold">🌐 Website</td>
+            <td class="italic underline opacity-80">www.ssplus.tn</td>
+          </tr>
+          <tr>
+            <td class="font-bold">💻 Customer Portal</td>
+            <td class="font-mono text-xs">www.ssplus.tn/waveplus</td>
+          </tr>
+          <tr>
+            <td class="font-bold text-red-600">🚨 Emergency (MSA)</td>
+            <td class="font-black text-red-600 animate-pulse">+216 XX XX XX XX</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Service Commitment Cards -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-black mb-6">💎 OUR SERVICE COMMITMENT</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="glass-card">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg text-red-600">⚙️</span>
+          <h4 class="font-black text-xs uppercase tracking-widest text-red-500">Quality</h4>
+        </div>
+        <ul class="space-y-3 text-xs font-medium opacity-80">
+          <li class="flex gap-2"><span>✓</span> Certified Technicians</li>
+          <li class="flex gap-2"><span>✓</span> Safety Standard Adherence</li>
+          <li class="flex gap-2"><span>✓</span> ISO-Level Expertise</li>
+        </ul>
+      </div>
+      
+      <div class="glass-card">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg text-red-600">⚡</span>
+          <h4 class="font-black text-xs uppercase tracking-widest text-red-500">Response</h4>
+        </div>
+        <ul class="space-y-3 text-xs font-medium opacity-80">
+          <li class="flex gap-2"><span>✓</span> 4h Inquiry Response</li>
+          <li class="flex gap-2"><span>✓</span> 24h Emergency Response</li>
+          <li class="flex gap-2"><span>✓</span> Next-day Quotations</li>
+        </ul>
+      </div>
+      
+      <div class="glass-card">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg text-red-600">🤝</span>
+          <h4 class="font-black text-xs uppercase tracking-widest text-red-500">Reliability</h4>
+        </div>
+        <ul class="space-y-3 text-xs font-medium opacity-80">
+          <li class="flex gap-2"><span>✓</span> Deadlines Honored</li>
+          <li class="flex gap-2"><span>✓</span> 06-Month Work Warranty</li>
+          <li class="flex gap-2"><span>✓</span> Proactive Updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authority Matrix Table -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-black mb-6">💼 FINANCIAL APPROVAL LIMITS</h2>
+    
+    <div class="modern-table-container">
+      <table class="modern-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Purchase Limit</th>
+            <th>Discount Cap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-bold">Managers</td>
+            <td class="text-red-600 font-bold">Unlimited</td>
+            <td class="text-red-600 font-bold">Unlimited</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Sales Resp.</td>
+            <td class="font-bold">Unlimited</td>
+            <td class="font-bold">20%</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Operations Resp.</td>
+            <td>1,000 TND</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Team Leaders</td>
+            <td>500 TND</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Sales Reps</td>
+            <td>N/A</td>
+            <td class="font-bold">15%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Payment Terms Cards -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-black mb-6">💳 PAYMENT & CREDIT POLICY</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="glass-card shadow-xl border-blue-500/10">
+        <h4 class="text-[10px] font-black uppercase tracking-widest text-blue-600 mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-blue-500"></span> Standard Payment Terms
+        </h4>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center border-b border-gray-100 dark:border-white/5 pb-2">
+            <span class="text-xs font-bold">New Customers</span>
+            <span class="px-2 py-0.5 bg-blue-500/10 text-blue-600 text-[9px] font-black uppercase rounded">
+              COD / 50% DEP
+            </span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-100 dark:border-white/5 pb-2">
+            <span class="text-xs font-bold">Established</span>
+            <span class="px-2 py-0.5 bg-slate-500/10 text-slate-600 text-[9px] font-black uppercase rounded">
+              NET 30 DAYS
+            </span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs font-bold">Strategic / Contract</span>
+            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-600 text-[9px] font-black uppercase rounded">
+              NET 60-90 DAYS
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="markdown-card-danger shadow-xl !border-red-500/20">
+        <h4 class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span> 50% Mandatory Deposit
+        </h4>
+        <ul class="text-[11px] space-y-2 list-none p-0 m-0 opacity-80 italic font-medium">
+          <li>▪ Custom Branded Items (Workwear/Signs)</li>
+          <li>▪ Equipment orders exceeding 10,000 TND</li>
+          <li>▪ Non-stock special procurements</li>
+          <li>▪ First-time orders for new entities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Mode Toggle (Optional) -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button 
+      onclick="document.documentElement.classList.toggle('dark')"
+      class="glass-card p-3 rounded-full hover:scale-110 transition-transform cursor-pointer shadow-xl"
+      aria-label="Toggle dark mode"
+    >
+      <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+      </svg>
+      <svg class="w-6 h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-20 py-10 border-t border-white/5 text-center">
+    <p class="text-[10px] font-black uppercase tracking-[0.3em] opacity-20 mb-2">
+      Sécurité Services Plus — Confidential
+    </p>
+    <p class="text-[9px] opacity-40 italic">
+      © 2026 Sécurité Services Plus. All rights reserved. Developed by WAVE IO.
+    </p>
+  </div>
+
+</div>
+
+<script>
+  // Initialize dark mode based on system preference
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+  
+  // Listen for changes in color scheme preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (e.matches) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  });
+</script>
+
+</body>
+</html>

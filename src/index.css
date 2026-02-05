@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --glass-bg-light: rgba(255, 255, 255, 0.7);
+    --glass-bg-dark: rgba(23, 23, 23, 0.7);
+    --glass-border-light: rgba(255, 255, 255, 0.3);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
+    --primary-red: #ef4444;
+}
+
+@layer base {
+    body {
+        @apply font-sans text-slate-900 bg-slate-50 dark:bg-[#0f1115] dark:text-white/90;
+        font-feature-settings: "cv02", "cv05", "cv11";
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply tracking-tight font-bold;
+    }
+}
+
+@layer components {
+
+    /* Aero / Glassmorphism Cards */
+    .glass-card {
+        @apply backdrop-blur-xl bg-white/70 dark:bg-black/40 border border-white/30 dark:border-white/10 rounded-2xl shadow-xl transition-all duration-300;
+    }
+
+    .glass-card:hover {
+        @apply bg-white/80 dark:bg-black/50 border-white/50 dark:border-white/20 shadow-2xl scale-[1.005];
+    }
+
+    /* Premium Modern Cards */
+    .markdown-card {
+        @apply glass-card p-6;
+    }
+
+    .markdown-card-premium {
+        @apply bg-slate-900 dark:bg-black text-white rounded-2xl border border-white/10 p-8 shadow-2xl relative overflow-hidden;
+        background-image: linear-gradient(to bottom right, #0f172a, #1e293b, #000000);
+    }
+
+    .markdown-card-premium::before {
+        content: '';
+        @apply absolute -top-24 -right-24 w-64 h-64 bg-red-600/20 rounded-full blur-[100px];
+    }
+
+    .markdown-card-danger {
+        @apply bg-red-50 dark:bg-red-950/20 backdrop-blur-md rounded-2xl border border-red-200 dark:border-red-900/50 p-6;
+    }
+
+    .markdown-card-success {
+        @apply bg-green-50 dark:bg-green-950/20 backdrop-blur-md rounded-2xl border border-green-200 dark:border-green-900/50 p-6;
+    }
+
+    .markdown-card-info {
+        @apply bg-blue-50 dark:bg-blue-950/20 backdrop-blur-md rounded-2xl border border-blue-200 dark:border-blue-900/50 p-6;
+    }
+
+    /* Modern Tables */
+    .modern-table-container {
+        @apply overflow-hidden rounded-xl border border-gray-200 dark:border-white/10 my-6;
+    }
+
+    .modern-table {
+        @apply w-full text-left border-collapse;
+    }
+
+    .modern-table th {
+        @apply bg-gray-50 dark:bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-white/10;
+    }
+
+    .modern-table td {
+        @apply px-6 py-4 text-sm border-b border-gray-100 dark:border-white/5 transition-colors;
+    }
+
+    .modern-table tr:last-child td {
+        @apply border-b-0;
+    }
+
+    .modern-table tr:hover td {
+        @apply bg-gray-50/50 dark:bg-white/5;
+    }
+
+    /* ISO Standard Section Markers */
+    .iso-section {
+        @apply relative pl-8 py-4 mb-4;
+    }
+
+    .iso-section::before {
+        content: '';
+        @apply absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-red-600 to-gray-200 dark:to-gray-800 rounded-full opacity-30;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-400/30 dark:bg-slate-700/50 rounded-full hover:bg-red-500/50 transition-colors;
+}
+
+/* Mermaid adjustments */
+.mermaid {
+    @apply flex justify-center py-4 bg-white/50 dark:bg-black/20 rounded-xl mt-4;
+}
